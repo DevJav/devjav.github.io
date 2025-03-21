@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Moreno Prieto | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="profile.png" alt="Javier Moreno Prieto" class="profile-pic">
+        <h1>Javier Moreno Prieto</h1>
+        <p>Software Engineer | Robotics & Autonomous Systems</p>
+        <p>📍 Lyngby, Denmark | 📧 <a href="mailto:javiermorenoprieto@gmail.com">javiermorenoprieto@gmail.com</a></p>
+        <p>🔗 <a href="https://github.com/DevJav" target="_blank">github.com/DevJav</a></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a <span id="age"></span> y/o software engineer passionate about high-performance robotics and autonomous systems. 
+        I specialize in software solutions for automotive, drones, and fleet management systems.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="job">
+            <h3>Robot Software Engineer | Meili Robots</h3>
+            <p><i>Dec 2023 – Present | Lyngby, Denmark</i></p>
+            <ul>
+                <li>Developed and integrated features for a fleet management system.</li>
+                <li>Added support for various robotic platforms.</li>
+                <li><strong>Skills:</strong> Python, ROS, API, MQTT</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Software Engineer | Bertrandt Technology</h3>
+            <p><i>Apr 2023 – Aug 2023 | Seville, Spain</i></p>
+            <ul>
+                <li>Contributed to software development for BMW's next-generation vehicles.</li>
+                <li><strong>Skills:</strong> C++, Python, GTest, Agile, AUTOSAR</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Software Engineer | CATEC</h3>
+            <p><i>Sep 2021 – Apr 2023 | Seville, Spain</i></p>
+            <ul>
+                <li>Developed software solutions for drone applications.</li>
+                <li><strong>Skills:</strong> C++, Python, Qt, ROS, MAVLink</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>MSc in Autonomous Systems</strong> – Technical University of Denmark (DTU) (2023 – Present)</li>
+            <li><strong>BSc in Electronics, Robotics & Mechatronics Engineering</strong> – University of Lyngby (2016 – 2022)</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming:</strong> C++, Python, MATLAB, VHDL</li>
+            <li><strong>Robotics & AI:</strong> ROS, Computer Vision, Kalman Filters</li>
+            <li><strong>Software Development:</strong> Git, AUTOSAR, Agile</li>
+            <li><strong>Soft Skills:</strong> Fast Learner, Problem Solving, Creativity, Teamwork</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>CAESIUM</strong> – Hybrid U-Space Simulator (2022 – 2023, CATEC + Indra + AIRBUS)</li>
+            <li><strong>Image Processing in Ornithopter Flights</strong> – Implemented various computer vision algorithms (2020 – 2021)</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📧 <a href="mailto:javiermorenoprieto@gmail.com">javiermorenoprieto@gmail.com</a></p>
+        <p>📍 Lyngby, Denmark</p>
+        <p>🔗 <a href="https://github.com/DevJav" target="_blank">github.com/DevJav</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Javier Moreno Prieto</p>
+    </footer>
+
+    <script>
+        function calculateAge(birthdate) {
+            const birthDate = new Date(birthdate);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+        document.getElementById("age").textContent = calculateAge("1999-06-15"); // Replace with your birthdate
+    </script>
+</body>
+</html>

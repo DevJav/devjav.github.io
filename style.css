@@ -1,0 +1,155 @@
+/* Define color variables */
+:root {
+    --bg-color: #2A1B3D; /* Deep purple background */
+    --primary-color: #5D2A8C; /* Strong purple as the main color */
+    --secondary-color: #8E5A8F; /* Lighter purple */
+    --url-color-unhovered: #d2a7d3; /* Lighter purple for unhovered links */
+    --accent-color: #F1C40F; /* Bright yellow for a striking contrast */
+    --text-color: #ffffff;
+}
+/* Basic link styles */
+a {
+    text-decoration: none; /* Removes the underline */
+    color: var(--url-color-unhovered); /* Uses your primary color (purple or yellow) */
+    font-weight: 600; /* Bold for emphasis */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for links */
+a:hover {
+    color: var(--accent-color); /* On hover, change to accent color */
+}
+
+/* Focus effect (for accessibility and keyboard users) */
+a:focus {
+    outline: 2px solid var(--accent-color); /* Adds a visible focus outline */
+    outline-offset: 2px;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: var(--accent-color);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Sections */
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(214, 189, 152, 0.3);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Job Experience */
+.job {
+    background: rgba(214, 189, 152, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.job h3 {
+    color: var(--accent-color);
+    margin: 5px 0;
+}
+
+.job p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Skills */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    background: rgba(214, 189, 152, 0.15);
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Contact */
+#contact p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    margin-top: 50px;
+}
