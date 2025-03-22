@@ -3,7 +3,7 @@
     --bg-color: #2A1B3D; /* Deep purple background */
     --primary-color: #5D2A8C; /* Strong purple as the main color */
     --secondary-color: #8E5A8F; /* Lighter purple */
-    --url-color-unhovered: #d2a7d3; /* Lighter purple for unhovered links */
+    --url-color-unhovered: #aaf5ff; /* Light blue for links */
     --accent-color: #F1C40F; /* Bright yellow for a striking contrast */
     --text-color: #ffffff;
 }
@@ -28,7 +28,7 @@ a:focus {
 
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
@@ -113,6 +113,7 @@ section h2 {
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .job h3 {
@@ -123,6 +124,42 @@ section h2 {
 .job p {
     opacity: 0.8;
     font-size: 0.9rem;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.job:hover {
+    background: rgba(214, 189, 152, 0.2);
+    transform: scale(1.01);
+}
+
+/* Education */
+.degree {
+    background: rgba(214, 189, 152, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.degree h3 {
+    color: var(--accent-color);
+    margin: 5px 0;
+}
+
+.degree p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.degree:hover {
+    background: rgba(214, 189, 152, 0.2);
+    transform: scale(1.01);
 }
 
 /* Skills */

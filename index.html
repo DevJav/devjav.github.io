@@ -17,11 +17,34 @@
 <body>
     <header>
         <img src="profile.png" alt="Javier Moreno Prieto" class="profile-pic">
-        <h1>Javier Moreno Prieto</h1>
+        <h1 id="typed-header"></h1>
         <p>Software Engineer | Robotics & Autonomous Systems</p>
         <p>📍 Lyngby, Denmark | 📧 <a href="mailto:javiermorenoprieto@gmail.com">javiermorenoprieto@gmail.com</a></p>
         <p>🔗 <a href="https://github.com/DevJav" target="_blank">github.com/DevJav</a></p>
     </header>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Javier Moreno Prieto";
+            let i = 0;
+            const speed = 100; // Typing speed
+            const cursor = "_";
+            const header = document.getElementById("typed-header");
+    
+            function typeEffect() {
+                if (i < (text.length-1)) {
+                    header.innerHTML = text.substring(0, i + 1) + cursor;
+                    i++;
+                    setTimeout(typeEffect, speed);
+                } else {
+                    header.innerHTML = text; // Remove cursor when done
+                }
+            }
+    
+            header.innerHTML = cursor; // Start with just the cursor
+            typeEffect();
+        });
+    </script>
 
     <nav>
         <ul>
@@ -43,7 +66,9 @@
     <section id="experience">
         <h2>Professional Experience</h2>
         <div class="job">
-            <h3>Robot Software Engineer | Meili Robots</h3>
+            <img src="meilirobots_logo.jfif" alt="Meili Robots Logo" class="company-logo">
+            <h3>Meili Robots</h3>
+            <p><b>Robot Software Engineer</b></p>
             <p><i>Dec 2023 – Present | Lyngby, Denmark</i></p>
             <ul>
                 <li>Developed and integrated features for a fleet management system.</li>
@@ -51,9 +76,10 @@
                 <li><strong>Skills:</strong> Python, ROS, API, MQTT</li>
             </ul>
         </div>
-
         <div class="job">
-            <h3>Software Engineer | Bertrandt Technology</h3>
+            <img src="bertrand.png" alt="Bertrandt Logo" class="company-logo">
+            <h3>Bertrandt Technology</h3>
+            <p><b>Software Engineer</b></p>
             <p><i>Apr 2023 – Aug 2023 | Seville, Spain</i></p>
             <ul>
                 <li>Contributed to software development for BMW's next-generation vehicles.</li>
@@ -62,7 +88,9 @@
         </div>
 
         <div class="job">
-            <h3>Software Engineer | CATEC</h3>
+            <img src="catec_logo.jfif" alt="CATEC Logo" class="company-logo">
+            <h3>CATEC</h3>
+            <p><b>Robotics Software Developer</b>
             <p><i>Sep 2021 – Apr 2023 | Seville, Spain</i></p>
             <ul>
                 <li>Developed software solutions for drone applications.</li>
@@ -73,10 +101,16 @@
 
     <section id="education">
         <h2>Education</h2>
-        <ul>
-            <li><strong>MSc in Autonomous Systems</strong> – Technical University of Denmark (DTU) (2023 – Present)</li>
-            <li><strong>BSc in Electronics, Robotics & Mechatronics Engineering</strong> – University of Lyngby (2016 – 2022)</li>
-        </ul>
+        <div class="degree">
+            <h3>MSc in Autonomous Systems</h3>
+            <p><b>DTU - Technical University of Denmark</b></p>
+            <p><i>2023 – present | Lyngby, Denmark</i></p>
+        </div>
+        <div class="degree">
+            <h3>BSc in Electronic, Mechatronics and Robotics Engineering</h3>
+            <p><b>Universidad de Sevilla</b></p>
+            <p><i>2016 – 2022 | Seville, Spain</i></p>
+        </div>
     </section>
 
     <section id="skills">
@@ -121,5 +155,7 @@
         }
         document.getElementById("age").textContent = calculateAge("1999-06-15"); // Replace with your birthdate
     </script>
+
+
 </body>
 </html>
