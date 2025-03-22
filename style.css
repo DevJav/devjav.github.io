@@ -215,3 +215,27 @@ footer {
     background-color: var(--secondary-color);
     margin-top: 50px;
 }
+
+/* Style for the "Go to top" button */
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Ensures the button is circular */
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height to match width */
+    padding: 0; /* Remove padding to maintain circular shape */
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    text-align: center; /* Center the text/icon */
+    line-height: 50px; /* Vertically center the text/icon */
+}
+
+.top-btn:hover {
+    background-color: var(--secondary-color);
+}
