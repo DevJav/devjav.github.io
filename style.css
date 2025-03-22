@@ -62,6 +62,9 @@ header p {
 }
 
 /* Navigation */
+html {
+    scroll-behavior: smooth;
+}
 nav {
     background: var(--secondary-color);
     padding: 10px 0;
@@ -71,10 +74,12 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center; /* Centers the items horizontally */
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -88,6 +93,26 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 10px 0; /* Add padding for spacing */
+    }
+    
+    nav ul li {
+        margin: 5px 0; /* Adjust vertical margin */
+    }
+    
+    nav ul li a {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+        padding: 10px 0; /* Add padding to make links more clickable */
+        width: 100%; /* Make the links full-width */
+        text-align: center; /* Align text in the center */
+    }
 }
 
 /* Sections */
