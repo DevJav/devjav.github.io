@@ -158,6 +158,19 @@ section h2 {
     border-radius: 50%;
 }
 
+.current-status {
+    background: transparent;
+    color: var(--accent-color);
+    padding: 5px 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block; /* Ensures proper alignment */
+    line-height: 1.5; /* Adjusts vertical alignment */
+}
+
 .job:hover {
     background: rgba(214, 189, 152, 0.2);
     transform: scale(1.01);

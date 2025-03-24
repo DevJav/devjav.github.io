@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" type="image/png" href="profile.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -29,7 +30,7 @@
             const speed = 100; // Typing speed
             const cursor = "_";
             const header = document.getElementById("typed-header");
-    
+
             function typeEffect() {
                 if (i < (text.length-1)) {
                     header.innerHTML = text.substring(0, i + 1) + cursor;
@@ -39,7 +40,7 @@
                     header.innerHTML = text; // Remove cursor when done
                 }
             }
-    
+
             header.innerHTML = cursor; // Start with just the cursor
             typeEffect();
         });
@@ -67,13 +68,14 @@
         <h2>Professional Experience</h2>
         <div class="job">
             <img src="meilirobots_logo.jfif" alt="Meili Robots Logo" class="company-logo">
+            <p><span class="current-status">Current</span></p>
             <h3>Meili Robots</h3>
-            <p><b>Robot Software Engineer</b></p>
+            <p><b>Robot Software Engineer</b> </p>
             <p><i>Dec 2023 – Present | Lyngby, Denmark</i></p>
             <ul>
-                <li>Developed and integrated features for a fleet management system.</li>
-                <li>Added support for various robotic platforms.</li>
-                <li><strong>Skills:</strong> Python, ROS, API, MQTT</li>
+            <li>Developed and integrated features for a fleet management system.</li>
+            <li>Added support for various robotic platforms.</li>
+            <li><strong>Skills:</strong> Python, ROS, API, MQTT</li>
             </ul>
         </div>
         <div class="job">
