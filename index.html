@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <link rel="shortcut icon" type="image/png" href="profile.png">
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/profile.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -11,28 +13,37 @@
     <meta property="og:title" content="Javier Moreno Prieto - Software Engineer">
     <meta property="og:description" content="Página personal de Javier Moreno Prieto, con información sobre su carrera profesional, habilidades y proyectos.">
     <meta property="og:url" content="https://devjav.github.io">
-    <meta property="og:image" content="profile.png">
+    <meta property="og:image" content="images/profile.png">
     <title>Javier Moreno Prieto - Software Engineer</title>
     </head>
 </head>
 <body>
     <header>
-        <img src="profile.png" alt="Javier Moreno Prieto" class="profile-pic">
+        <img src="images/profile.png" alt="Javier Moreno Prieto" class="profile-pic">
         <h1 id="typed-header"></h1>
         <p>Software Engineer | Robotics & Autonomous Systems</p>
-        <p>📍 Lyngby, Denmark | 📧 <a href="mailto:javiermorenoprieto@gmail.com">javiermorenoprieto@gmail.com</a></p>
-        <p>🔗 <a href="https://github.com/DevJav" target="_blank">github.com/DevJav</a></p>
+        <p>📧 <a href="mailto:javiermorenoprieto@gmail.com">javiermorenoprieto@gmail.com</a></p>
+        <p>
+            <a href="https://github.com/DevJav" target="_blank">
+            <img src="images/github-icon.png" alt="GitHub" style="width: 20px; vertical-align: middle;"> GitHub
+            </a> | 
+            <a href="https://www.linkedin.com/in/javier-moreno-prieto/" target="_blank">
+            <img src="images/linkedin-icon.webp" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> LinkedIn
+            </a>
+        </p></a>
     </header>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const text = "Javier Moreno Prieto";
             let i = 0;
-            const speed = 100; // Typing speed
             const cursor = "_";
             const header = document.getElementById("typed-header");
+            const max_speed = 110;
+            const min_speed = 85;
 
             function typeEffect() {
-                if (i < (text.length-1)) {
+                const speed = Math.floor(Math.random() * (max_speed - min_speed + 1) + min_speed);
+                if (i < (text.length - 1)) {
                     header.innerHTML = text.substring(0, i + 1) + cursor;
                     i++;
                     setTimeout(typeEffect, speed);
@@ -59,15 +70,17 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey! I'm Javi, a <span id="age"></span>-year-old from Spain. I'm into a bunch of things, but especially tech, 
-        programming, robotics, and vehicles. That's why I shaped my career around this world—first with a BSc in Electronics, 
-        Robotics, and Mechatronics, and now doing an MSc in Autonomous Systems. Along the way, I've worked in different jobs, picking up tons of real-world experience.</p>
+        <p>Hey there! I'm Javi, a <span id="age"></span>-year-old tech enthusiast from Spain. If it moves, computes, or can be automated, I'm probably into it.</p>
+        <p>My passion for robotics, programming, and vehicles led me to dive deep into this world—starting with a BSc in Electronics, Robotics, and Mechatronics, and now leveling up with an MSc in Autonomous Systems.</p>
+        <p>Along the way, I've had hands-on experience in different jobs, tackling real-world challenges and learning way more than textbooks could ever teach. Always up for new projects, cool tech, and pushing boundaries!</p>
     </section>
+    
+    
 
     <section id="experience">
         <h2>Professional Experience</h2>
         <div class="job">
-            <img src="meilirobots_logo.jfif" alt="Meili Robots Logo" class="company-logo">
+            <img src="images/meilirobots_logo.jfif" alt="Meili Robots Logo" class="company-logo">
             <p><span class="current-status">Current</span></p>
             <h3>Meili Robots</h3>
             <p><b>Robot Software Engineer</b> </p>
@@ -79,7 +92,7 @@
             </ul>
         </div>
         <div class="job">
-            <img src="bertrand.png" alt="Bertrandt Logo" class="company-logo">
+            <img src="images/bertrand.png" alt="Bertrandt Logo" class="company-logo">
             <h3>Bertrandt Technology</h3>
             <p><b>Software Engineer</b></p>
             <p><i>Apr 2023 – Aug 2023 | Seville, Spain</i></p>
@@ -90,7 +103,7 @@
         </div>
 
         <div class="job">
-            <img src="catec_logo.jfif" alt="CATEC Logo" class="company-logo">
+            <img src="images/catec_logo.jfif" alt="CATEC Logo" class="company-logo">
             <h3>CATEC</h3>
             <p><b>Robotics Software Developer</b>
             <p><i>Sep 2021 – Apr 2023 | Seville, Spain</i></p>
