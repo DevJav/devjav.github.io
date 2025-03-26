@@ -1,32 +1,50 @@
-/* Define color variables */
+/* Define reusable variables */
 :root {
-    --bg-color: #ffffff; /* Deep purple background */
-    --primary-color: #512da8; /* Strong purple as the main color */
-    --secondary-color: #673ab7; /* Lighter purple */
-    --url-color-unhovered: #d1c4e9; /* Light blue for links */
-    --accent-color: #ffc107; /* Bright yellow for a striking contrast */
+    /* Color variables */
+    --bg-color: #ffffff;
+    --primary-color: #512da8;
+    --secondary-color: #673ab7;
+    --accent-color: #ffc107;
     --text-color: #ffffff;
-    --shadow-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black for shadows */
-    --primary-text-color: #212121; /* Dark grey for text */
-    --secondary-text-color: #757575; /* Light grey for secondary text */
-    --divider-color: #bdbdbd; /* Light grey for dividers */
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --divider-color: #bdbdbd;
+    --url-color-unhovered: #d1c4e9;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    /* Spacing variables */
+    --padding-small: 10px;
+    --padding-medium: 15px;
+    --padding-large: 20px;
+    --margin-small: 5px;
+    --margin-medium: 15px;
+    --margin-large: 20px;
+    --section-padding: 5px 20px; /* Common padding for sections */
+    --border-radius: 8px;
+    --hover-scale: 1.01; /* Common hover scale effect */
+
+    /* List item variables */
+    --list-item-bg-color: rgba(214, 189, 152, 0.15); /* Background color for list items */
+    --list-item-padding: 8px 15px; /* Padding for list items */
+    --list-item-margin: 5px; /* Margin for list items */
+    --border-radius: 20px; /* Consistent border radius */
+    --font-size-small: 0.9rem; /* Font size for small text */
 }
+
 /* Basic link styles */
 a {
-    text-decoration: none; /* Removes the underline */
-    color: var(--url-color-unhovered); /* Uses your primary color (purple or yellow) */
-    font-weight: 600; /* Bold for emphasis */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+    text-decoration: none;
+    color: var(--url-color-unhovered);
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for links */
 a:hover {
-    color: var(--accent-color); /* On hover, change to accent color */
+    color: var(--accent-color);
 }
 
-/* Focus effect (for accessibility and keyboard users) */
 a:focus {
-    outline: 2px solid var(--accent-color); /* Adds a visible focus outline */
+    outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 
@@ -42,10 +60,10 @@ body {
 /* Header */
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: var(--padding-small) var(--padding-large);
     background-color: var(--primary-color);
-    position: relative; /* Ensure header is not affected by nav's shadow */
-    z-index: 1; /* Place header above nav */
+    position: relative;
+    z-index: 1;
 }
 
 .profile-pic {
@@ -53,12 +71,12 @@ header {
     height: 150px;
     border-radius: 50%;
     border: 2px solid var(--accent-color);
-    margin-bottom: 15px;
+    margin-bottom: var(--margin-medium);
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin: 10px 0;
+    margin: var(--margin-small) 0;
     color: var(--accent-color);
 }
 
@@ -71,25 +89,26 @@ header p {
 html {
     scroll-behavior: smooth;
 }
+
 nav {
     background: var(--primary-color);
-    padding: 10px 0;
+    padding: var(--padding-small) 0;
     text-align: center;
-    box-shadow: 0px 2px 5px var(--shadow-color);
-    position: relative; /* Ensure nav's shadow doesn't overlap header */
-    z-index: 0; /* Place nav below header */
-    }
+    box-shadow: 0px 3px 5px var(--shadow-color);
+    position: relative;
+    z-index: 0;
+}
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Use flexbox for better alignment */
-    justify-content: center; /* Centers the items horizontally */
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 var(--margin-large);
 }
 
 nav ul li a {
@@ -101,37 +120,37 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack the items vertically */
-        align-items: center; /* Center items horizontally */
-        padding: 10px 0; /* Add padding for spacing */
+        flex-direction: column;
+        align-items: center;
+        padding: var(--padding-small) 0;
     }
     
     nav ul li {
-        margin: 5px 0; /* Adjust vertical margin */
+        margin: var(--margin-small) 0;
     }
     
     nav ul li a {
-        font-size: 1.2rem; /* Adjust font size for mobile */
-        padding: 10px 0; /* Add padding to make links more clickable */
-        width: 100%; /* Make the links full-width */
-        text-align: center; /* Align text in the center */
-}
+        font-size: 1.2rem;
+        padding: var(--padding-small) 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Sections */
 section {
     color: var(--primary-text-color);
     max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: var(--background-color);
-    border-radius: 12px;
+    margin: var(--margin-large) auto;
+    padding: var(--section-padding);
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
     box-shadow: 0px 2px 5px var(--shadow-color);
 }
 
@@ -139,24 +158,24 @@ section h2 {
     color: var(--primary-color);
     font-size: 1.8rem;
     border-bottom: 3px solid var(--accent-color);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+    padding-bottom: var(--padding-small);
+    margin-bottom: var(--margin-large);
 }
 
 /* Job Experience */
 .job {
     color: var(--primary-text-color);
     background: rgba(255, 255, 255, 0.15);
-    padding: 15px;
+    padding: var(--padding-medium);
     box-shadow: 0px 2px 5px var(--shadow-color);
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--margin-medium);
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .job h3 {
     color: var(--primary-color);
-    margin: 5px 0;
+    margin: var(--margin-small) 0;
 }
 
 .job p {
@@ -174,33 +193,33 @@ section h2 {
 .current-status {
     background: transparent;
     color: var(--accent-color);
-    padding: 5px 10px;
+    padding: var(--padding-small) var(--padding-medium);
     border: 2px solid var(--accent-color);
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: bold;
     text-align: center;
-    display: inline-block; /* Ensures proper alignment */
-    line-height: 1.5; /* Adjusts vertical alignment */
+    display: inline-block;
+    line-height: 1.5;
 }
 
 .job:hover {
-    transform: scale(1.01);
+    transform: scale(var(--hover-scale));
     box-shadow: 0px 3px 8px var(--shadow-color);
 }
 
 /* Education */
 .degree {
-    background: rgba(214, 189, 152, 0.15);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    padding: var(--padding-medium);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--margin-medium);
+    box-shadow: 0px 2px 5px var(--shadow-color);
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .degree h3 {
-    color: var(--accent-color);
-    margin: 5px 0;
+    color: var(--primary-color);
+    margin: var(--margin-small) 0;
 }
 
 .degree p {
@@ -209,16 +228,25 @@ section h2 {
 }
 
 .degree:hover {
-    background: rgba(214, 189, 152, 0.2);
-    transform: scale(1.01);
+    transform: scale(var(--hover-scale));
+    box-shadow: 0px 3px 8px var(--shadow-color);
 }
 
-/* Skills */
-ul {
+/* Lists */
+ul:not(nav ul) {
     padding: 0;
     list-style: none;
 }
 
+ul:not(nav ul) li {
+    background: var(--bg-color);
+    display: inline-block;
+    padding: var(--padding-medium); 
+    margin: var(--margin-small); 
+    border-radius: var(--border-radius); 
+    font-size: var(--font-size-small); 
+    box-shadow: 0px 2px 5px var(--shadow-color); 
+}
 
 
 /* Contact */
@@ -230,29 +258,26 @@ ul {
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: var(--padding-medium);
     background-color: var(--secondary-color);
-    margin-top: 50px;
+    margin-top: var(--margin-large);
 }
 
 /* Style for the "Go to top" button */
 .top-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: var(--padding-medium);
+    right: var(--padding-medium);
     background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 50%; /* Ensures the button is circular */
-    width: 50px; /* Set a fixed width */
-    height: 50px; /* Set a fixed height to match width */
-    padding: 0; /* Remove padding to maintain circular shape */
-    font-size: 24px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    display: none; /* Initially hidden */
+    display: none;
     transition: opacity 0.3s ease;
-    text-align: center; /* Center the text/icon */
-    line-height: 50px; /* Vertically center the text/icon */
+    box-shadow: 0px 3px 8px var(--shadow-color);
 }
 
 .top-btn:hover {
