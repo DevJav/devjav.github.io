@@ -14,3 +14,5 @@ window.onscroll = function() {
 mybutton.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+mdc.ripple.MDCRipple.attachTo(document.querySelector('.button'));
