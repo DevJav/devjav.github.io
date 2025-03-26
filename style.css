@@ -2,6 +2,8 @@
 :root {
     /* Color variables */
     --bg-color: #ffffff;
+    --header-color: #512da8;
+    --header-text-color: #ffffff;
     --primary-color: #512da8;
     --secondary-color: #673ab7;
     --accent-color: #ffc107;
@@ -11,6 +13,8 @@
     --divider-color: #bdbdbd;
     --url-color-unhovered: #d1c4e9;
     --shadow-color: rgba(0, 0, 0, 0.3);
+    --circular-button-color: #00796B;
+    --circular-button-color-hover: #009688;
 
     /* Spacing variables */
     --padding-small: 10px;
@@ -29,6 +33,20 @@
     --list-item-margin: 5px; /* Margin for list items */
     --border-radius: 20px; /* Consistent border radius */
     --font-size-small: 0.9rem; /* Font size for small text */
+}
+
+.darkmode{
+    --bg-color: #212121;
+    --header-color: #512da8;
+    --primary-color: #ffc107;
+    --secondary-color: #673ab7;
+    --accent-color: #ffc107;
+    --text-color: #212121;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #bdbdbd;
+    --divider-color: #bdbdbd;
+    --url-color-unhovered: #d1c4e9;
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Basic link styles */
@@ -61,7 +79,7 @@ body {
 header {
     text-align: center;
     padding: var(--padding-small) var(--padding-large);
-    background-color: var(--primary-color);
+    background-color: var(--header-color);
     position: relative;
     z-index: 1;
 }
@@ -81,6 +99,7 @@ header h1 {
 }
 
 header p {
+    color: var(--header-text-color);
     font-size: 1.2rem;
     opacity: 0.9;
 }
@@ -91,7 +110,7 @@ html {
 }
 
 nav {
-    background: var(--primary-color);
+    background: var(--header-color);
     padding: var(--padding-small) 0;
     text-align: center;
     box-shadow: 0px 3px 5px var(--shadow-color);
@@ -165,7 +184,7 @@ section h2 {
 /* Job Experience */
 .job {
     color: var(--primary-text-color);
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--bg-color);
     padding: var(--padding-medium);
     box-shadow: 0px 2px 5px var(--shadow-color);
     border-radius: var(--border-radius);
@@ -264,22 +283,59 @@ footer {
 }
 
 /* Style for the "Go to top" button */
-.top-btn {
+#topBtn {
+    height: 50px;
+    width: 50px;
+    padding: 0%;
+    border-radius: 50%;
+    background-color: var(--circular-button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: var(--padding-medium);
     right: var(--padding-medium);
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    display: none;
-    transition: opacity 0.3s ease;
-    box-shadow: 0px 3px 8px var(--shadow-color);
+    /* z value on top*/
+    z-index:4 ;
+    transition: background 0.1s ease, transform 0.3s ease, opacity 0.3s ease, visibility 0.3s, opacity 0.3s ease;
 }
 
-.top-btn:hover {
-    background-color: var(--secondary-color);
+#topBtn:hover {
+    background-color: var(--circular-button-color-hover);
+}
+
+
+#darkmodebutton {
+    height: 50px;
+    width: 50px;
+    padding: 0%;
+    border-radius: 50%;
+    background-color: var(--circular-button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: var(--padding-medium);
+    right: var(--padding-medium);
+    /* z value on top*/
+    z-index:4 ;
+    transition: background 0.1s ease, transform 0.3s ease, opacity 0.3s ease, visibility 0.3s, opacity 0.3s ease;
+}
+
+#darkmodebutton:hover {
+    background-color: var(--circular-button-color-hover);
+}
+
+#darkmodebutton .mdc-fab__icon:last-child {
+    display: none;
+}
+#darkmodebutton .mdc-fab__icon:first-child {
+    display: block;
+}
+
+.darkmode #darkmodebutton .mdc-fab__icon:first-child {
+    display: none;
+}
+.darkmode #darkmodebutton .mdc-fab__icon:last-child {
+    display: block;
 }
