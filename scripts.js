@@ -31,9 +31,17 @@ topBtn.addEventListener("click", function() {
 });
 
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    enableDarkMode();
-}
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if dark mode was manually set before
+    const savedMode = localStorage.getItem("darkmode");
+
+    if (savedMode === "true") {
+        document.body.classList.add("darkmode");
+    } else if (savedMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // If no manual setting, follow system preference
+        enableDarkMode();
+    }
+});
 
 const enableDarkMode = () => {
     document.body.classList.add('darkmode');

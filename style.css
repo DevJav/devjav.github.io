@@ -6,6 +6,7 @@
     --header-text-color: #ffffff;
     --primary-color: #512da8;
     --secondary-color: #673ab7;
+    --card-color: #ffffff;
     --accent-color: #ffc107;
     --text-color: #ffffff;
     --primary-text-color: #212121;
@@ -36,17 +37,18 @@
 }
 
 .darkmode{
-    --bg-color: #212121;
-    --header-color: #512da8;
+    --bg-color: #121212;
+    --header-color: #212121;
     --primary-color: #ffc107;
     --secondary-color: #673ab7;
+    --card-color: #212121;
     --accent-color: #ffc107;
     --text-color: #212121;
     --primary-text-color: #ffffff;
     --secondary-text-color: #bdbdbd;
     --divider-color: #bdbdbd;
     --url-color-unhovered: #d1c4e9;
-    --shadow-color: rgba(0, 0, 0, 0.5);
+    --shadow-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Basic link styles */
@@ -73,6 +75,7 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Header */
@@ -82,6 +85,8 @@ header {
     background-color: var(--header-color);
     position: relative;
     z-index: 1;
+    transition: background 0.3s ease, transform 0.3s ease;
+
 }
 
 .profile-pic {
@@ -116,6 +121,7 @@ nav {
     box-shadow: 0px 3px 5px var(--shadow-color);
     position: relative;
     z-index: 0;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 nav ul {
@@ -168,7 +174,7 @@ section {
     max-width: 800px;
     margin: var(--margin-large) auto;
     padding: var(--section-padding);
-    background-color: var(--bg-color);
+    background-color: var(--card-color);
     border-radius: var(--border-radius);
     box-shadow: 0px 2px 5px var(--shadow-color);
 }
@@ -184,7 +190,7 @@ section h2 {
 /* Job Experience */
 .job {
     color: var(--primary-text-color);
-    background: var(--bg-color);
+    background: var(--card-color);
     padding: var(--padding-medium);
     box-shadow: 0px 2px 5px var(--shadow-color);
     border-radius: var(--border-radius);
@@ -258,7 +264,7 @@ ul:not(nav ul) {
 }
 
 ul:not(nav ul) li {
-    background: var(--bg-color);
+    background: var(--card-color);
     display: inline-block;
     padding: var(--padding-medium); 
     margin: var(--margin-small); 
